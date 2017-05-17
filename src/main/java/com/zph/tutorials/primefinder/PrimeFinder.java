@@ -42,7 +42,7 @@ public class PrimeFinder {
 
     public static void main(String[] args) {
         long startAt = System.nanoTime();
-        int max = 1000000;
+        int max = 10000000;
         PrimeFinder finder = new PrimeFinder(max);
         int count = finder.run();
         System.out.printf("%d, cost %.3fms%n", count, (double)(System.nanoTime() - startAt) / 1000000.0);
@@ -53,7 +53,7 @@ class PrimeItem {
     int value;
     PrimeItem next;
 
-    public PrimeItem(int value) {
+    PrimeItem(int value) {
         this.value = value;
     }
 }
